@@ -1,0 +1,76 @@
+/* Mengatur tampilan dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff5f5;
+  color: #4b352c;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Bagian atas website */
+header {
+  background-color: #a47158;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Menu navigasi */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* Bagian beranda */
+.hero {
+  background-color: #f8d7e3;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 {
+  color: #8b5e4a;
+}
+
+/* Bagian isi website */
+.section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Judul setiap bagian */
+.section h2 {
+  color: #a47158;
+}
+
+/* Gambar museum */
+.section img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+/* Kartu daya tarik */
+.kartu {
+  background-color: #fff0f5;
+  padding: 15px;
+  border-left: 4px solid #d99bb0;
+}
+
+/* Daftar informasi */
+#info li {
+  margin-bottom: 10px;
+}
+
+/* Bagian bawah website */
+footer {
+  background-color: #a47158;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
