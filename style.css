@@ -1,76 +1,295 @@
-/* Mengatur tampilan dasar */
+/* ==========================================
+   🌷 JELAJAH WISATA INDONESIA
+   Cute Pastel Edition by Etha 🎀
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --pink: #f29abd;
+    --pink-dark: #cf6794;
+    --pink-light: #fff0f6;
+    --cream: #fffaf3;
+    --white: #ffffff;
+    --text: #594653;
+    --shadow: 0 8px 25px rgba(201, 103, 148, 0.12);
+}
+
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff5f5;
-  color: #4b352c;
-  margin: 0;
-  line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(
+        180deg,
+        #fff8fb,
+        #fffdf8,
+        #fff4f8
+    );
+    color: var(--text);
+    line-height: 1.8;
+    padding-top: 85px;
 }
 
-/* Bagian atas website */
-header {
-  background-color: #a47158;
-  color: white;
-  text-align: center;
-  padding: 20px;
+/* ===== NAVBAR STICKY DI ATAS ===== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 16px 6%;
+    background: rgba(255, 240, 246, 0.97);
+    border-bottom: 2px solid #ffe0ec;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
 }
 
-/* Menu navigasi */
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 10px;
+    display: inline-block;
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 7px 12px;
+    border-radius: 25px;
+    transition: 0.3s ease;
 }
 
-/* Bagian beranda */
+nav a:hover {
+    background: white;
+    color: #b94e7e;
+    transform: translateY(-2px);
+}
+
+/* ===== BAGIAN WEBSITE ===== */
+
+section {
+    padding: 65px 8%;
+    scroll-margin-top: 100px;
+}
+
+h1, h2, h3 {
+    color: var(--pink-dark);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+h2 {
+    font-size: clamp(25px, 4vw, 34px);
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* ===== BERANDA: JUDUL DI TENGAH ===== */
+
+#beranda,
 .hero {
-  background-color: #f8d7e3;
-  text-align: center;
-  padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 75vh;
+    padding: 60px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #ffe7f0,
+        #fff8ec,
+        #fcecf8
+    );
+
+    border-radius: 0 0 45px 45px;
+    scroll-margin-top: 100px;
 }
 
-.hero h2 {
-  color: #8b5e4a;
+#beranda h1,
+.hero h1 {
+    text-align: center;
+    font-size: clamp(32px, 5vw, 52px);
+    color: #cf6794;
+    margin-bottom: 20px;
 }
 
-/* Bagian isi website */
-.section {
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+#beranda p,
+.hero p {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 22px;
 }
 
-/* Judul setiap bagian */
-.section h2 {
-  color: #a47158;
+#beranda img,
+.hero img {
+    display: block;
+    margin: 20px auto;
 }
 
-/* Gambar museum */
-.section img {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 15px auto;
-  border-radius: 10px;
+/* ===== GAMBAR ===== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 22px;
 }
 
-/* Kartu daya tarik */
-.kartu {
-  background-color: #fff0f5;
-  padding: 15px;
-  border-left: 4px solid #d99bb0;
+section img {
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
 }
 
-/* Daftar informasi */
-#info li {
-  margin-bottom: 10px;
+section img:hover {
+    transform: scale(1.02);
 }
 
-/* Bagian bawah website */
+/* ===== KARTU WISATA ===== */
+
+.card,
+.card-wisata,
+.wisata-card {
+    background: var(--white);
+    padding: 24px;
+    margin: 20px 0;
+    border: 1px solid #ffe1ed;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card-wisata:hover,
+.wisata-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(201, 103, 148, 0.18);
+}
+
+/* ===== TOMBOL LUCU ===== */
+
+button,
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #f6a8c6,
+        #e982ae
+    );
+
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(207, 103, 148, 0.2);
+    transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--pink-dark);
+    box-shadow: 0 8px 18px rgba(207, 103, 148, 0.25);
+}
+
+/* ===== LINK ===== */
+
+a {
+    transition: color 0.3s ease;
+}
+
+/* ===== LIST ===== */
+
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+
 footer {
-  background-color: #a47158;
-  color: white;
-  text-align: center;
-  padding: 15px;
+    text-align: center;
+    padding: 30px 7%;
+    margin-top: 30px;
+
+    background: #ffedf4;
+    color: #9d5c79;
+    border-top: 2px solid #ffe0ec;
+    border-radius: 30px 30px 0 0;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* ===== RESPONSIVE UNTUK HP ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 115px;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 10px 3%;
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 6px 9px;
+        margin: 1px;
+    }
+
+    section {
+        padding: 42px 6%;
+        scroll-margin-top: 125px;
+    }
+
+    #beranda,
+    .hero {
+        min-height: 65vh;
+        padding: 50px 6%;
+    }
+
+    .card,
+    .card-wisata,
+    .wisata-card {
+        padding: 18px;
+        border-radius: 20px;
+    }
 }
